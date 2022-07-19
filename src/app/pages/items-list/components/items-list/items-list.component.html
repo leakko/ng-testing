@@ -1,4 +1,4 @@
 <main>
-    <h2>Your items | Main Item: {{mainItem.name}}</h2>
+    <h2>Your items | Main Item: <span>{{mainItem.name}}</span></h2>
     <app-item *ngFor="let item of items" [itemInfo]="item" (makeMain)="updateMainItem($event)" class="item"></app-item>
 </main>
