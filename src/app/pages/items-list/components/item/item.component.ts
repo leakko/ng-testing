@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { item } from 'src/app/interfaces/item';
 
 @Component({
   selector: 'app-item',
@@ -6,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./item.component.scss']
 })
 export class ItemComponent implements OnInit {
+
+  @Input() itemInfo!: item;
+
+  @Output() makeMain = new EventEmitter<item>();
 
   constructor() { }
 

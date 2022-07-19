@@ -1,3 +1,4 @@
 <main>
-    <p>items-list works!</p>
+    <h2>Your items | Main Item: {{mainItem.name}}</h2>
+    <app-item *ngFor="let item of items" [itemInfo]="item" (makeMain)="updateMainItem($event)" class="item"></app-item>
 </main>
