@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { item } from 'src/app/interfaces/item';
+import { Item } from 'src/app/interfaces/item';
 import { ItemsService } from 'src/app/services/items.service';
 
 @Component({
@@ -9,8 +9,8 @@ import { ItemsService } from 'src/app/services/items.service';
 })
 export class ItemsListComponent implements OnInit {
 
-  items!: item[];
-  mainItem!: item;
+  items!: Item[];
+  mainItem!: Item;
 
   constructor(private itemsService: ItemsService) { }
 
@@ -21,7 +21,7 @@ export class ItemsListComponent implements OnInit {
     });
   }
 
-  updateMainItem(item: item) {
+  updateMainItem(item: Item) {
     this.mainItem = item;
   }
 

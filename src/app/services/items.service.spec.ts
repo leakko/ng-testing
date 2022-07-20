@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { TestBed } from '@angular/core/testing';
-import { item } from '../interfaces/item';
+import { Item } from '../interfaces/item';
 import { asyncData } from '../testing/async-observable-helpers';
 
 import { ItemsService } from './items.service';
@@ -15,7 +15,7 @@ describe('ItemsService', () => {
   });
 
   it('should return the expected items', (done: DoneFn) => {
-    const expectedItems: item[] = [{ name: 'One', value: 1 }, { name: 'Two', value: 2 }];
+    const expectedItems: Item[] = [{ name: 'One', value: 1 }, { name: 'Two', value: 2 }];
     httpClientSpy.get.and.returnValue(asyncData(expectedItems));
 
     itemsService.getItems().subscribe(
