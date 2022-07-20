@@ -15,7 +15,7 @@ import { ItemComponent } from './components/item/item.component';
   imports: [
     CommonModule,
     ItemsListRoutingModule,
-    MatButtonModule
+    MatButtonModule,
   ]
 })
 export class ItemsListModule { }
