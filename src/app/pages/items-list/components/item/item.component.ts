@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Item } from 'src/app/interfaces/item';
 
 @Component({
@@ -12,9 +13,13 @@ export class ItemComponent implements OnInit {
 
   @Output() makeMain = new EventEmitter<Item>();
 
-  constructor() { }
+  constructor(private router: Router, private actRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
+  }
+
+  goToDetails() {
+    this.router.navigate(['.//', this.itemInfo.name.toLowerCase()], {relativeTo: this.actRoute});
   }
 
 }

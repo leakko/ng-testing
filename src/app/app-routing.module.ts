@@ -10,7 +10,7 @@ const routes: Routes = [
     loadChildren: () =>
       import('./pages/items-list/items-list.module').then(
         (m) => m.ItemsListModule
-      ),
+      )
   },
   {
     path: 'compose',

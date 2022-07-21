@@ -1,5 +1,6 @@
 <div>
     <p class="name">Name: <span>{{itemInfo?.name}}</span></p>
     <p class="value">Value: <span>{{itemInfo?.value}}</span></p>
-    <button mat-button color="principal" class="button" (click)="makeMain.emit(itemInfo)">Make principal</button>
+    <button mat-button color="principal" class="button" (click)="makeMain.emit(itemInfo)">Make principal</button><br>
+    <button mat-button color="principal" class="see-details" (click)="goToDetails()">Go to details</button>
 </div>
