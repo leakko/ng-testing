@@ -9,3 +9,10 @@ span {
         cursor: pointer;
     }
 }
+
+.active-popup::after {
+    content: "·";
+    font-size: 2rem;
+    position: relative;
+    top: 5px;
+}

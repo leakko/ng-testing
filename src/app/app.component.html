@@ -2,6 +2,8 @@
   <mat-toolbar-row>
     <span routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}">Home</span>
     <span routerLink="/items-list" routerLinkActive="active-link">Items list</span>
+    <span [routerLink]="[{ outlets: { popup: ['compose'] } }]" routerLinkActive="active-popup">Contact</span>
   </mat-toolbar-row>
 </mat-toolbar>
+<router-outlet name="popup"></router-outlet>
 <router-outlet></router-outlet>
